@@ -1,10 +1,4 @@
-import React, { useState,useEffect } from "react";
-import {Redirect} from "react-router-dom";
-import {Anchor, Drawer, Button, Form, Cascader, Input} from 'antd';
-import {UserOutlined} from '@ant-design/icons';
-
-const { Link } = Anchor;
-
+import React, {useEffect } from "react";
 
 function AppHeader() {
 
@@ -19,8 +13,8 @@ function AppHeader() {
             <div className="container-fluid">
                 <div className="header">
                     <div className="logo">
-                        <i class="fa fa-flask" aria-hidden="true"></i>
-                        <a href="/">Final</a>
+                        <i className="fa fa-flask" aria-hidden="true" />
+                        <a href="/"> Final</a>
                     </div>
 
                 </div>

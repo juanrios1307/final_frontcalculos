@@ -3,7 +3,7 @@ import '../assets/css/App.css';
 import AppHeader from "./Header";
 import {Button, Form, InputNumber, Layout} from 'antd';
 import Axios from "axios";
-const { Header, Content, Footer } = Layout;
+const { Header, Content} = Layout;
 
 const formItemLayout = {
     labelCol: {
