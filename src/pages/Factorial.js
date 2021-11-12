@@ -107,7 +107,7 @@ class Factorial extends Component {
                                 &&(
                                 <div>
                                     <div className="titleHolder">
-                                        <h2>Resultado{this.state.calculo}</h2>
+                                        <h2>Resultado: {this.state.calculo}</h2>
                                     </div>
                                 </div>
                                 )
