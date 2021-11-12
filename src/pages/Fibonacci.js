@@ -60,6 +60,7 @@ class Fibonacci extends Component {
                 data.map((n)=>
                     <li>{n}</li>
                 )
+
         })
     }
 
