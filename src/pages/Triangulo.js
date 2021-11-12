@@ -42,7 +42,7 @@ class Fibonacci extends Component {
 
         console.log(values)
 
-        const url = 'localhost:5000/api/medidas/triangulo'
+        const url = 'https://finalback2021.herokuapp.com/api/medidas/triangulo'
 
         const config = {
             method: 'get',
@@ -74,7 +74,10 @@ class Fibonacci extends Component {
                     <div id="hero" className="registerBlock">
                         <div className="container-fluid">
                             <div className="titleHolder">
-                                <h2>Triangulo</h2>
+
+                            </div>
+                            <div className="titleHolder">
+                                <h2>Area y perimetro Triangulo</h2>
                             </div>
 
                             <div className="block">
@@ -147,8 +150,8 @@ class Fibonacci extends Component {
                                 &&(
                                     <div>
                                         <div className="titleHolder">
-                                            <h2>{this.state.area}</h2>
-                                            <h2>{this.state.perimetro}</h2>
+                                            <h2>Area: {this.state.area}</h2>
+                                            <h2>Perimetro: {this.state.perimetro}</h2>
                                         </div>
                                     </div>
                                 )

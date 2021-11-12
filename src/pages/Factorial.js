@@ -41,7 +41,7 @@ class Factorial extends Component {
 
         console.log(values)
 
-        const url = 'localhost:5000/api/calculos/factorial'
+        const url = 'https://finalback2021.herokuapp.com/api/calculos/factorial'
 
         const config = {
             method: 'get',
@@ -69,6 +69,9 @@ class Factorial extends Component {
                 <Content>
                     <div id="hero" className="registerBlock">
                         <div className="container-fluid">
+                            <div className="titleHolder">
+
+                            </div>
                             <div className="titleHolder">
                                 <h2>Factorial</h2>
                             </div>
@@ -104,7 +107,7 @@ class Factorial extends Component {
                                 &&(
                                 <div>
                                     <div className="titleHolder">
-                                        <h2>{this.state.calculo}</h2>
+                                        <h2>Resultado{this.state.calculo}</h2>
                                     </div>
                                 </div>
                                 )

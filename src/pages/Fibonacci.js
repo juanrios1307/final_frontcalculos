@@ -32,7 +32,7 @@ class Fibonacci extends Component {
     constructor() {
         super();
         this.state ={
-            calculo:0
+            calculo:[]
         }
         this.onFinish=this.onFinish.bind(this)
     }
@@ -41,7 +41,7 @@ class Fibonacci extends Component {
 
         console.log(values)
 
-        const url = 'localhost:5000/api/calculos/fibonacci'
+        const url = 'https://finalback2021.herokuapp.com/api/calculos/fibonacci'
 
         const config = {
             method: 'get',
@@ -54,8 +54,13 @@ class Fibonacci extends Component {
         const response = await Axios(config)
 
         const data = response.data.data
-
-        this.setState({calculo:data})
+        console.log(response)
+        this.setState({
+            calculo:
+                data.map((n)=>
+                    <li>{n}</li>
+                )
+        })
     }
 
     render() {
@@ -69,6 +74,9 @@ class Fibonacci extends Component {
                 <Content>
                     <div id="hero" className="registerBlock">
                         <div className="container-fluid">
+                            <div className="titleHolder">
+
+                            </div>
                             <div className="titleHolder">
                                 <h2>Fibonacci</h2>
                             </div>
@@ -100,13 +108,12 @@ class Fibonacci extends Component {
                                     </Form.Item>
                                 </Form>
 
-                                {this.state.calculo > 0
+                                {this.state.calculo.length > 0
                                     &&(
-                                        <div>
-                                            <div className="titleHolder">
-                                                <h2>{this.state.calculo}</h2>
-                                            </div>
-                                        </div>
+                                    <div className="titleHolder">
+                                        <ul>{this.state.calculo}</ul>
+                                    </div>
+
                                     )
                                 }
 

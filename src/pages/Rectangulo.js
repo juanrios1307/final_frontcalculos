@@ -42,7 +42,7 @@ class Rectangulo extends Component {
 
         console.log(values)
 
-        const url = 'localhost:5000/api/medidas/rectangulo'
+        const url = 'https://finalback2021.herokuapp.com/api/medidas/rectangulo'
 
         const config = {
             method: 'get',
@@ -72,7 +72,10 @@ class Rectangulo extends Component {
                     <div id="hero" className="registerBlock">
                         <div className="container-fluid">
                             <div className="titleHolder">
-                                <h2>Rectangulo</h2>
+
+                            </div>
+                            <div className="titleHolder">
+                                <h2>Area y perimetro Rectangulo</h2>
                             </div>
 
                             <div className="block">
@@ -119,8 +122,8 @@ class Rectangulo extends Component {
                                 &&(
                                     <div>
                                         <div className="titleHolder">
-                                            <h2>{this.state.area}</h2>
-                                            <h2>{this.state.perimetro}</h2>
+                                            <h2>Area: {this.state.area}</h2>
+                                            <h2>Perimetro: {this.state.perimetro}</h2>
                                         </div>
                                     </div>
                                 )
