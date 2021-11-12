@@ -93,7 +93,7 @@ class Factorial extends Component {
                                             },
                                         ]}
                                     >
-                                        <InputNumber min={0}/>
+                                        <InputNumber min={1}/>
                                     </Form.Item>
 
                                     <Form.Item {...tailFormItemLayout}>
